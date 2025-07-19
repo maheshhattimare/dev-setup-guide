@@ -45,7 +45,7 @@ git pull origin main --allow-unrelated-histories
 
 ---
 
-##❌ If you want the copied folder to be fresh, not linked to the old repo:
+## ❌ If you want the copied folder to be fresh, not linked to the old repo:
 
 ```bash
 rm -rf .git
