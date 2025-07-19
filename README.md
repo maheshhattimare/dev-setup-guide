@@ -45,6 +45,14 @@ git pull origin main --allow-unrelated-histories
 
 ---
 
+##❌ If you want the copied folder to be fresh, not linked to the old repo:
+
+```bash
+rm -rf .git
+```
+
+---
+
 ## ⚛️ React App with Vite
 
 > For React boilerplate: type `rfce` in your component (requires ES7+ extension)
