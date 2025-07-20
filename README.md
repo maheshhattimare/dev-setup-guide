@@ -71,6 +71,9 @@ npm create vite@latest . -- --template react
 
 ```bash
 npm install -D tailwindcss@3 postcss autoprefixer
+```
+
+```bash
 npx tailwindcss init -p
 ```
 
