@@ -11,6 +11,7 @@ A modern and minimal guide for initializing Git projects, setting up React with 
 - [📅 Pull Code into Editor](#-pull-code-into-editor)
 - [⚛️ React App with Vite](#⚛️-react-app-with-vite)
 - [🎨 Tailwind CSS Installation](#-tailwind-css-installation)
+- [🌐 Deploying to Render](#-deploying-to-render)
 
 ---
 
@@ -93,6 +94,95 @@ content: [
 @tailwind components;
 @tailwind utilities;
 ```
+
+
+## 🚀 Deploying Node.js Backend to Render
+
+Follow this step-by-step guide to deploy your **Node.js backend** (inside the `/backend` folder) to **Render**.
+
+---
+
+## 📁 Project Structure
+
+Make sure your folder structure looks like this:
+
+```
+project-root/
+│
+├── backend/
+│   ├── server.js
+│   ├── package.json
+│   └── ...
+│
+├── frontend/
+│   └── ...
+```
+
+---
+
+## ⚙️ package.json Configuration
+
+Inside `backend/package.json`, ensure your scripts look like this:
+
+```json
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "start": "node server.js",
+  "dev": "nodemon server.js"
+}
+```
+
+---
+
+## 📤 Push to GitHub
+
+Make sure your code is version controlled and pushed to GitHub:
+
+```bash
+git add .
+git commit -m "Prepare for Render deployment"
+git push origin main
+```
+
+---
+
+## 🌐 Deploying to Render
+
+1. Go to [https://render.com](https://render.com) and log in using GitHub
+2. Click **"New +" → "Web Service"**
+3. Connect your GitHub repository
+4. Fill the Render setup form with the following details:
+
+| Setting             | Value                                    |
+|---------------------|------------------------------------------|
+| **Name**            | `portfolio-backend` *(or anything)*      |
+| **Root Directory**  | `backend` ✅ *(very important)*          |
+| **Environment**     | `Node`                                   |
+| **Build Command**   | `npm install` *(or leave blank)*         |
+| **Start Command**   | `npm start`                              |
+| **Region**          | Closest to your audience *(e.g., Singapore for India)* |
+
+---
+
+### 🔐 Environment Variables
+
+If you're using a `.env` file locally, make sure to manually add those variables under:
+
+> **Render Dashboard → Your Service → Environment tab**
+
+---
+
+### ✅ Final Step
+
+Click **Create Web Service**. Render will install dependencies and start your backend using `server.js`.
+
+Once deployed, your backend will be live at a Render-provided URL. Test it in your browser or with Postman.
+
+---
+
+### 🌟 Done!
+
+Your backend is now successfully deployed to Render 🎉
 
 ---
 
